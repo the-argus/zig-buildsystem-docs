@@ -75,3 +75,68 @@ See [Basic Syntax](./BASIC_ZIG_SYNTAX.md) for a primer on the very very basics
 of the language. Luckily, that is most of the language.
 
 ### Building A Basic Project
+
+Let's say that you have project with a directory structure that looks something
+like this:
+
+- src/
+  - foo.c
+  - bar.c
+- include/
+  - foo.h
+  - bar.h
+- LICENSE
+- .gitignore
+- main.c
+
+You can see this in the `examples/1_basic` directory.
+
+The first step is to create a `build.zig` file. Then, give it the following
+contents:
+
+```zig
+const std = @import("std");
+
+pub fn build(b: *std.Build) void {
+    const target = b.standardTargetOptions(.{});
+    const optimize = b.standardOptimizeOption(.{});
+
+    const exe = b.addExecutable(.{
+        .name = "example",
+        .target = target,
+        .optimize = optimize,
+    });
+
+    exe.addCSourceFiles(&.{
+        "main.c",
+        "src/foo.c",
+        "src/bar.c",
+    }, &.{
+        "-Wall",
+    });
+
+    exe.addIncludePath(.{ .path = "include" });
+
+    exe.linkLibC();
+
+    b.installArtifact(exe);
+}
+```
+
+If things in here like `fn` and `.{}` are alien to you, check out the [Basic Syntax](./BASIC_ZIG_SYNTAX.md)
+page. If not, then read on. We'll start by going line by line.
+
+```zig
+const target = b.standardTargetOptions(.{});
+```
+
+This function will look at the arguments passed to the program (the familiar
+`argv`) and looks for a flag `-Dtarget="..."` and tries to parse it. If it's
+successful, it will return a [`std.zig.CrossTarget`](https://ziglang.org/documentation/master/std/#A;std:zig.CrossTarget).
+We can then pass that struct to other functions to let them know what kind of
+architecture, OS, and libc we want to use.
+
+Additionally, this function will add some additional info to the stdout if this
+program is invoked with `zig build help`. It will include a description of the
+target option.
+
