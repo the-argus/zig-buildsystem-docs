@@ -22,12 +22,20 @@ to shipping its own libc.
 
 Building a Zig project looks like this on all platforms:
 
+First, go to [ziglang.org/download](https://ziglang.org/download/) and
+download the `v0.11.0` zip/tarball for your system. Unzip it. Add the resulting
+unpacked folder to your path (it should contain a `zig` or `zig.exe` executable).
+Then:
+
+
 ```bash
-cd projectdir
+cd zigproject
 zig build
 ```
 
-Zig is also a package manager.
+It will fetch any third party dependencies, build them and compile your program.
+
+Oh yeah, Zig is also a package manager.
 
 Additionally, Zig provides a declarative method of building, which we'll discuss
 more later. It makes Zig good at detecting changes and invalidating cache. I rarely
