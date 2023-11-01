@@ -51,7 +51,7 @@ build you C/C++ projects. So lets go over just what you need to know to get it w
 Zig is a single executable program. If you download zig, you will get a zip/tar
 file containing the stdlib as text files, and some file like `zig.exe` or just
 `zig`. This is a CLI program, so you will be using `cmd.exe` or powershell or your
-favorite terminal emulator to use Zig.
+favorite terminal emulator to interact with it.
 
 Zig has many _subcommands_. These are basically all of the different things that
 zig can do. It can translate C code into zig code with the `translate-c` subcommand,
