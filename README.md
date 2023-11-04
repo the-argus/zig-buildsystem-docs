@@ -10,7 +10,12 @@ is not CMake and vcpkg, that is for sure).
 
 ## Table of Contents
 
+First, you're going to want to visit [Basic Syntax](./SYNTAX_BASIC.md) unless you
+are already confident writing zig code.
 
+1. Examples and Walkthrough
+    1. [Basic Executable](./EXAMPLE_1_BASIC_EXECUTABLE.md)
+2. [API Documentation](./API.md)
 
 ## Why Zig and not Meson or Scons or Foobar?
 
