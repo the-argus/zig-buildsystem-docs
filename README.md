@@ -8,6 +8,10 @@ Intended for people who do not really want to learn the Zig language, but just w
 to build their C and C++ projects in the easiest way possible (the easiest way
 is not CMake and vcpkg, that is for sure).
 
+## Table of Contents
+
+
+
 ## Why Zig and not Meson or Scons or Foobar?
 
 Meson is not much different from cmake: it is primarily an improvement if you come
@@ -66,7 +70,3 @@ command line invocation. The program that was compiled was _not_ your project's
 executable or library. Rather, it is an executable which is able to compile your
 project. So compilation with zig is two step: first, compile the build program,
 then compile the target program.
-
-## How Do I Start?
-
-Zig 

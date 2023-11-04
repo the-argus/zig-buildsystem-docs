@@ -199,5 +199,7 @@ b.installArtifact(exe);
 ```
 
 Here it is, the ultimate step: setting the build to actual depend on the compilation
-of this executable. If you do not do this step, the exe will basically not be
+of this executable. If you do not do this step, the exe will not be a part of the
+build graph and therefore be ignored.
 
+All done. Now run `zig build` to get the executable in `zig-out/bin/`.
