@@ -14,16 +14,16 @@ First, you're going to want to visit [Basic Syntax](./SYNTAX_BASIC.md) unless yo
 are already confident writing zig code.
 
 1. Examples and Walkthrough
-    1. [Basic Executable](./EXAMPLE_1_BASIC_EXECUTABLE.md)
+    1. [Basic C Executable](./EXAMPLE_01_BASIC_EXECUTABLE.md)
+    2. [C Library](./EXAMPLE_2_C_LIBRARY.md)
 2. [API Documentation](./API.md)
 
 ## Why Zig and not Meson or Scons or Foobar?
 
-Meson is not much different from cmake: it is primarily an improvement if you come
-from the dark depths known as "autotools." Scons is certainly a worthy competitor
-to Zig. In the case of both Zig and scons, you get access to a fully-featured
-language thanks to the build system basically just being a library for those
-languages.
+Meson is not much different from cmake: it is an improvement over autotools, though.
+Scons is certainly a worthy competitor to Zig. In the case of both Zig and scons,
+you get access to a fully-featured programming language when writing your build
+scripts.
 
 But Zig has one great advantage: it is a C/C++ compiler as well as a build system.
 That means _no more compiler detecting code_. There is only _one_ compiler that
