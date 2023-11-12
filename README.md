@@ -14,9 +14,11 @@ First, you're going to want to visit [Basic Syntax](./SYNTAX_BASIC.md) unless yo
 are already confident writing zig code.
 
 1. Examples and Walkthrough
-    1. [Basic C Executable](./EXAMPLE_01_BASIC_EXECUTABLE.md)
-    2. [C Library](./EXAMPLE_2_C_LIBRARY.md)
+   1. [Basic C Executable](./EXAMPLE_01_BASIC_EXECUTABLE.md)
+   2. [C Library](./EXAMPLE_2_C_LIBRARY.md)
+   3. [Package Manager](./EXAMPLE_03_PACKAGE_MANAGER.md)
 2. [API Documentation](./API.md)
+3. [Common Patterns In The Zig Buildsystem API](./API_PATTERNS.md)
 
 ## Why Zig and not Meson or Scons or Foobar?
 
