@@ -18,7 +18,6 @@ pub fn build(b: *std.Build) void {
     });
 
     libfoo.addIncludePath(.{ .path = "include" });
-    libfoo.addIncludePath(.{ .path = "src" });
 
     libfoo.linkLibC();
 

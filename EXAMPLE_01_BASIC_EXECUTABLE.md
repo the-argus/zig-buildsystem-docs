@@ -19,7 +19,6 @@ like this:
 - include/
   - foo.h
   - bar.h
-- LICENSE
 - .gitignore
 - main.c
 
@@ -200,6 +199,11 @@ b.installArtifact(exe);
 
 Here it is, the ultimate step: setting the build to actual depend on the compilation
 of this executable. If you do not do this step, the exe will not be a part of the
-build graph and therefore be ignored.
+build graph and therefore be ignored when running `zig build`. What this actually
+does is set the install step (which is always run) to be dependent on building your
+library. You can also make other steps besides the install step, and then run
+them with `zig build stepname`. We'll cover that in detail later. For now, we are
+only using `zig build` which just does the install step, and for that to build
+our custom executable it needs to depend on it.
 
 All done. Now run `zig build` to get the executable in `zig-out/bin/`.
