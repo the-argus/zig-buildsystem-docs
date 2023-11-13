@@ -81,3 +81,23 @@ and run `zig build`, it will be as though I never even changed the URL. Zig will
 just keep using the tarball it has in cache, because the hash is the same.
 
 ## Using Dependencies In Your build.zig
+
+A dependency is a downloaded tarball which, when unpacked, contains a `build.zig`
+file. That `build.zig` has a `pub fn build(b: *std.Build)` in it. We want to call
+that function, because it will accept a `*std.Build` and modify it to contain the
+build graph for building the dependency. In order to call the dependency's `build`
+function, we call `std.Build.dependency`. For example, for raylib:
+
+```zig
+const raylib_dep = b.dependency("raylib", .{
+    .target = target,
+    .optimize = optimize,
+});
+```
+
+We use the string `"raylib"` because that is the name we gave the dependency in
+the build.zig.zon (so "raylib" here corresponds to the "raylib" in
+`.raylib = .{ ... }` in our build.zig.zon.
+
+We also pass in a struct which looks a bit like `ExecutableOptions` that we saw
+in the first example. However, this is an anonymous struct.

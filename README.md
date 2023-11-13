@@ -10,8 +10,8 @@ is not CMake and vcpkg, that is for sure).
 
 ## Table of Contents
 
-First, you're going to want to visit [Basic Syntax](./SYNTAX_BASIC.md) unless you
-are already confident writing zig code.
+First, you're going to want to visit [Basic Syntax](./SYNTAX_01_BASIC.md) unless
+you are already confident writing zig code.
 
 1. Examples and Walkthrough
    1. [Basic C Executable](./EXAMPLE_01_BASIC_EXECUTABLE.md)
@@ -19,6 +19,10 @@ are already confident writing zig code.
    3. [Package Manager](./EXAMPLE_03_PACKAGE_MANAGER.md)
 2. [API Documentation](./API.md)
 3. [Common Patterns In The Zig Buildsystem API](./API_PATTERNS.md)
+4. Zig Syntax Reference
+   1. [Basic Syntax](./SYNTAX_01_BASIC.md)
+   2. [Arrays and Slices](./SYNTAX_02_ARRAYS_AND_SLICES.md)
+   3. [Generics](./SYNTAX_03_GENERICS.md)
 
 ## Why Zig and not Meson or Scons or Foobar?
 

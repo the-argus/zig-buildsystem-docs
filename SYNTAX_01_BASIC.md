@@ -33,7 +33,8 @@ case, though, zig lets you use this shorthand to import this known namespace.
 
 TODO: is there some sort of search path or environment variable zig uses for this?
 
-`;` is used to end an operation.
+`;` is used to end an operation (either an assignment operator or outermost function
+call).
 
 Continuing on to the function:
 

@@ -5,7 +5,7 @@ executable with no dependencies besides libc and/or libc++.
 
 ## Basic Zig Syntax
 
-See [Basic Syntax](./SYNTAX_BASIC.md) for a primer on the very very basics
+See [Basic Syntax](./SYNTAX_01_BASIC.md) for a primer on the very very basics
 of the language. Luckily, that is most of the language.
 
 ## The Project
