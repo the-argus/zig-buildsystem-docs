@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const program = b.addSharedLibrary(.{
+    const program = b.addExecutable(.{
         .name = "program",
         .target = target,
         .optimize = optimize,

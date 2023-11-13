@@ -1,8 +1,13 @@
 #include <raylib.h>
+#include <math.h>
+
+#define SCREEN_WIDTH 600
+#define SCREEN_HEIGHT 600
 
 int main() {
   SetConfigFlags(FLAG_MSAA_4X_HINT);
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Zig buildsystem example with raylib");
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT,
+             "Zig buildsystem example with raylib");
   SetTargetFPS(60);
 
   while (!WindowShouldClose()) {
