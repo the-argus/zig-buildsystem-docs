@@ -10,7 +10,7 @@ whose source is in another third-party library. First, create a file next to you
 
 ```zig
 .{
-    .name = "mypackage",
+    .name = "myprogram",
     .version = "0.0.1",
 
     .dependencies = .{
